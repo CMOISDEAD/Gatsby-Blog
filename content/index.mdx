@@ -2,81 +2,210 @@
 title: "DropBlog"
 description: "Welcome to Document, a Gatsby.js theme by Code Bushi. Quickly and easily create documentation for anything using MDX or Markdown."
 ---
+
 ### DropBlog
 
-Welcome to Document, a Gatsby.js theme by [Code Bushi](https://codebushi.com/gatsby-starters-and-themes/). Quickly and easily create documentation for anything using MDX or Markdown.
+Aqui voy a poner los cambios hechos en el codigo.
 
-👀 [View the Live Demo](https://gatsby-theme-document.netlify.com/)
+[Descargar el codigo](https://drive.google.com/file/d/1vJLylsEdtmYrjDnSAunF1p1lx8VgLk7o/view?usp=sharing)
 
-## Getting Started
+## Documentacion
 
-Using the Gatsby CLI
+El codigo va estar en zonas similares a estas.
 
-```bash
-gatsby new document-site https://github.com/codebushi/gatsby-theme-document-example.git
-cd document-site
-gatsby develop
-```
+```java
+public class Aplicacion {
 
-Your new site will be up at http://localhost:8000
-
-Try changing the logo by editing the file at `src/gatsby-theme-document/logo.mdx`.
-
-## Adding Content
-
-Document is built with [MDX](https://mdxjs.com/). Content can be added by creating or editing the MDX files in the content folder `content/index.mdx`.
-
-With MDX, you can add JSX or even React components to your markdown files. Images can also be added to any `.mdx` file, and will be automatically optimized using [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/).
-
-### Left Sidebar
-
-The left sidebar navigation is automatically populated by the pages in the content folder. To sort the top level navigation, edit the `forcedNavOrder` option in the `gatsby-config.js` file.
-
-The logo will link to the `index.mdx` page. To make the `index.mdx` page visible in the left navigation, set `ignoreIndex` to `false`.
-
-Sub navigation items are created by making a folder with the same name as the top level `.mdx` file. The sub navigation is ordered alphabetically.
-
-### Right Sidebar
-
-The contents of the right sidebar will be automatically populated by any heading tags `h1, h2, h3, etc.` that are added to the page. They will anchor link to the corresponding heading.
-
-## Theme Colors
-
-Document is also built with [Theme UI](https://theme-ui.com). The icon in the top right of the site will cycle through the various color modes that are available.
-
-To edit or add colors modes, edit the file at `src/gatsby-plugin-theme-ui/colors.js`. To learn more about color modes, check out the [Theme UI docs](https://theme-ui.com/color-modes).
-
-The contents of the MDX files are also styled with Theme UI and can be edited at `src/gatsby-plugin-theme-ui/index.js`. The styles for the heading tags are found at `src/gatsby-plugin-theme-ui/headingsjs`. Learn more about [styling MDX](https://theme-ui.com/styling-mdx) from the Theme UI docs.
-
-## Syntax Colors
-
-Document uses [@theme-ui/prism](https://theme-ui.com/prism) for syntax highlighting. Different presets can be used by editing the file at `src/gatsby-plugin-theme-ui/index.js`. The desired preset must be included at the top of the file and spread into the `pre` styles
-
-```javascript
-import dracula from '@theme-ui/prism/presets/dracula.json';
-
-styles: {
-  pre: {
-    ...dracula,
-  }
+public static void main(String[] args) {
+		VentanaBingo miVentanaBingo;
+		miVentanaBingo=new VentanaBingo();
+        miVentanaBingo.setVisible(true);
+        miVentanaBingo.setLocationRelativeTo(null);
+	}
 }
 ```
 
-The code blocks will not change color based on the color modes. For a complete list of all available prism presets, check out the Theme UI [syntax themes](https://theme-ui.com/prism#syntax-themes).
+Solo pondre las lineas que he cambiado del codigo.
 
-## Social Media Icons
+y las rutas o nombres de los documentos estaran resalatados de siguente manera. `bingo/view/VentanaBingo.java`.
 
-The social media icons in the header can be edited in the `gatsby-config.js` file, under social. Currently, you can only add Twitter and Github links.
+## Archivos Editados
 
-## SEO, Site Image, and Manifest Icons
+Los archivos que he editado son los que apareceran con un \* al inicio:
 
-Document uses React Helmet to add meta tags to the website's `<head>` tag. When adding/editing a file in the content folder, be sure to include the Title and Description in the frontmatter. These are automatically used to generate the title and description meta tags for the page.
+```bash
+└── bingo
+    ├── Aplicacion.java # Archivo Principal
+    ├──model
+    │    └── *Bingo.java # Logica del bingo
+    └── view
+        ├── *VentanaTablero.java # Ventana del tablero del bingo
+        ├── *VentanaDatosUsuario.java # esta la cree yo, no sirve aun
+        ├── *VentanaBingo.java # Ventana principal del bingo
+        ├── Dialogo.java
+        ├── DialogoDeError.java
+        ├── DialogoDeAdvertencia.java
+        └── Biblioteca.java # Biblioteca
 
-```md
----
-title: "Document by Code Bushi"
-description: "This is the meta description"
----
 ```
 
-There is also an image at `src/site-image.jpg` which is used for the Open Graph image tag, as well as the Twitter card. Another image at `src/site-icon.png` is used by the [gatsby-plugin-manifest](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/) to generate a Favicon and other device icons.
+## Bingo.java
+
+Archivo -> `bingo/model/Bingo.java`.
+
+```java
+public void crearTableros() {
+Random rnd = new Random();
+int tableroBingo[][] = null;
+int contador = 0;
+for (int c = 0; c < 75; c++) {
+tableroBingo = new int[TAM][tam];
+for (int i = 0; i < TAM; i++) {
+
+    			for (int j = 0; j < TAM; j++) {
+
+    				if ( j == 0) {
+    					tableroBingo[i][j] = rnd.nextInt(15-1+1)+1;
+    				}else if ( j == 1) {
+    					tableroBingo[i][j] = rnd.nextInt(30-15+1)+15;
+    				}else if ( j == 2) {
+    					tableroBingo[i][j] = rnd.nextInt(45-30+1)+30;
+    				}else if ( j == 3) {
+    					tableroBingo[i][j] = rnd.nextInt(60-45+1)+45;
+    				}else if ( j == 4) {
+    					tableroBingo[i][j] = rnd.nextInt(75-60+1)+60;
+    				}
+
+    				contador++;
+    			}
+    		}
+    		tableros.add(tableroBingo);
+    	}
+    }
+```
+
+Archvio editado desde la linea numero 25.
+
+QUE HACE?
+
+la variable rnd crea una instancia de Random, esto servira para crear numero aleatorios.
+
+```java
+Random rnd = new Random();
+```
+
+Son tres ciclos `for`.
+
+- El primero va a repetirse el numero de tablero que pidamos en este caso 75.
+- El segundo se repetira la cantidad de columnas del tablero.
+- El tercero se repetira la cantidad de filas del tablero, ademas de aqui estar la logica de los numeros aleatorios.
+
+```java
+if ( j == 0) {
+  tableroBingo[i][j] = rnd.nextInt(15-1+1)+1;
+}else if ( j == 1) {
+  tableroBingo[i][j] = rnd.nextInt(30-15+1)+15;
+}else if ( j == 2) {
+  tableroBingo[i][j] = rnd.nextInt(45-30+1)+30;
+}else if ( j == 3) {
+  tableroBingo[i][j] = rnd.nextInt(60-45+1)+45;
+}else if ( j == 4) {
+  tableroBingo[i][j] = rnd.nextInt(75-60+1)+60;
+}
+```
+
+Aqui se hara un `if` anidado para establecer los rangos de los numeros, esto por que en el bingo del proyecto final dice que dependiendo la columna el rango de numeros varia.
+
+esta declaracion de variable lo que hace es establecer el numero dentro de una cacilla donde i es la columna y j la fila,
+
+```java
+tableroBingo[i][j]
+```
+
+este pedazo de codigo genera el numero aleatorio dentro del rango que le asignemos.
+
+```java
+rnd.nextInt(numeroMaximo-numeroMinimo+1)+numeroMaximo;
+```
+
+donde `numeroMaximo` es el valor maximo que puede alcanzar el numero y `numeroMinimo` el minimo valor que este puede tener.
+Ejemplo:
+para crear un numero aleatorio en un rango de 30 a 45, el codigo seria asi:
+
+```java
+  tableroBingo[i][j] = rnd.nextInt(45-30+1)+30;
+```
+
+## VentanaBingo.java
+
+Archivo -> `bingo/view/ventanaBingo.java`.
+
+Aqui es dificil explicar ya que la mayoria de lo que hice fue estetico y fue usando el plugin recomendado por la profesora llama windowBuilder.
+Asi que solo mostrare algunos aspectos importanter.
+
+El codigo completo del archivo estara aqui [VentanaBingo.java](https://drive.google.com/file/d/1514OzHcbO_4gRc11mrpp9VnVZUHd5DdA/view?usp=sharing).
+
+Este texto se puede remplazar por cualquier otro y seria el primer mensaje que el usuario observaria.
+```java
+areaMensaje.setText(
+   "▓█████▄  ██▀███   ▒█████   ██▓███  ▓█████▄ ▓█████ ▄▄▄      ▓█████▄   ██████ "
++"\n▒██▀ ██▌▓██ ▒ ██▒▒██▒  ██▒▓██░  ██▒▒██▀ ██▌▓█   ▀▒████▄    ▒██▀ ██▌▒██    ▒ "
++"\n░██   █▌▓██ ░▄█ ▒▒██░  ██▒▓██░ ██▓▒░██   █▌▒███  ▒██  ▀█▄  ░██   █▌░ ▓██▄   "
++"\n░▓█▄   ▌▒██▀▀█▄  ▒██   ██░▒██▄█▓▒ ▒░▓█▄   ▌▒▓█  ▄░██▄▄▄▄██ ░▓█▄   ▌  ▒   ██▒"
++"\n░▒████▓ ░██▓ ▒██▒░ ████▓▒░▒██▒ ░  ░░▒████▓ ░▒████▒▓█   ▓██▒░▒████▓ ▒██████▒▒"
++"\n ▒▒▓  ▒ ░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒▓▒░ ░  ░ ▒▒▓  ▒ ░░ ▒░ ░▒▒   ▓▒█░ ▒▒▓  ▒ ▒ ▒▓▒ ▒ ░"
++"\n ░ ▒  ▒   ░▒ ░ ▒░  ░ ▒ ▒░ ░▒ ░      ░ ▒  ▒  ░ ░  ░ ▒   ▒▒ ░ ░ ▒  ▒ ░ ░▒  ░ ░"
++"\n ░ ░  ░   ░░   ░ ░ ░ ░ ▒  ░░        ░ ░  ░    ░    ░   ▒    ░ ░  ░ ░  ░  ░  "
++"\n   ░       ░         ░ ░              ░       ░  ░     ░  ░   ░          ░  "
++"\n ░                                  ░                       ░           ");
+```
+Esta funcion servira para cambiar el tema del programa, algo al estilo del modo oscuro o el modo luz, realmente no es necesario pero la profesora nos va a dar puntos por eso.
+```java
+public void cambiarColores(int backgroundColor, int foregroundColor) {
+  `...somecode`
+}
+```
+Para agregar eventos a los botones o cualquier elemento, se usa esto.
+```java 
+button.addActionListener(this);
+```
+`button` se remplaza con la variable que contiene el boton o cualquiero otro elemento, este codigo se pone al final de la funcion principal.
+esto solo llama una funcion y envia ese elemnto, dentro de la funcion debemos hacer lo siguiente.
+
+```java
+public void actionPerformed(ActionEvent e) {
+  if (e.getSource() == button) {
+			JOptionPane.showMessageDialog(null, "esto es una ventana de dialogo");
+		}
+}
+```
+simplemente dentro de un `if` validamos si el evento llego esto se hace con `e.getSource() === button`, y dentro pasamos lo que queremos que haga, en este caso llama a la libreria de JOptionPane y a su funcion para mostrar una venta emergente y le pasamos el texto.
+## VentanaTablero.java
+
+Archivo -> `bingo/view/VentanaTablero.java`.
+
+Aqui todo fue hecho con el plugin windowBuilder, solo agregue el texo BINGO al principio.
+
+El codigo completo del archivo estara aqui [VentanaTablero.java](https://drive.google.com/file/d/1L6jiyWQxBQN5v786hSj8WVYaHJUbkblR/view?usp=sharing).
+
+## VentanaDatosUsuario.java
+
+`Este archivo no funciona por ahora, la idea es pedir en este los datos del cliente para venderle los tablero y demas, pero aun no encuentro como ponerla a trabajar.`
+## Aclaraciones
+
+Por el momento solo se cumple con algunas de las caracteristicas pedidas por la profesora:
+
+- Generar los 70 tableros, de forma dinamica. ✔
+- Mostrar un tablero específico. ✔
+- Permitir a un usuario, que indique su número de cédula, comprar un tablero. Un cliente
+podrá comprar todos los tableros que quiera. ✗
+- Informar la cantidad de dinero recaudado por los tableros vendidos. ✗
+- Entregar premio a los 3 primeros ganadores del bingo. ✗
+- Mostrar los 3 tableros más cercanos a ganar bingo. ✗
+- Regalar una cantidad n de tableros a los asistentes para que jueguen bingo. ✗
+- Mostrar las bolas que ya han sido seleccionada. ✗
+- Informar si el ganador principal del bingo lo hizo con un tablero comprado o regalado. ✗
+- Listar todos los números de tablero, luego de finalizar el juego, de menor a mayor bolas
+faltantes para haber ganado. ✗
+
+Aun faltan bastantes cosas que implementar.
