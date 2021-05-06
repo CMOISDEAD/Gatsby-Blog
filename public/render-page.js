@@ -7664,14 +7664,14 @@ var index = (function (_ref) {
 
 /***/ }),
 
-/***/ "./node_modules/@theme-ui/prism/presets/night-owl.json":
-/*!*************************************************************!*\
-  !*** ./node_modules/@theme-ui/prism/presets/night-owl.json ***!
-  \*************************************************************/
-/*! exports provided: color, backgroundColor, .changed, .deleted, .inserted,.attr-name, .comment, .string,.url, .variable, .number, .builtin,.char,.constant,.function, .punctuation, .selector,.doctype, .class-name, .tag,.operator,.keyword, .boolean, .property, .namespace, default */
+/***/ "./node_modules/@theme-ui/prism/presets/dracula.json":
+/*!***********************************************************!*\
+  !*** ./node_modules/@theme-ui/prism/presets/dracula.json ***!
+  \***********************************************************/
+/*! exports provided: color, backgroundColor, .prolog,.constant,.builtin, .inserted,.function, .deleted, .changed, .punctuation,.symbol, .string,.char,.tag,.selector, .keyword,.variable, .comment, .attr-name, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"color\":\"#d6deeb\",\"backgroundColor\":\"#011627\",\".changed\":{\"color\":\"rgb(162, 191, 252)\",\"fontStyle\":\"italic\"},\".deleted\":{\"color\":\"rgba(239, 83, 80, 0.56)\",\"fontStyle\":\"italic\"},\".inserted,.attr-name\":{\"color\":\"rgb(173, 219, 103)\",\"fontStyle\":\"italic\"},\".comment\":{\"color\":\"rgb(99, 119, 119)\",\"fontStyle\":\"italic\"},\".string,.url\":{\"color\":\"rgb(173, 219, 103)\"},\".variable\":{\"color\":\"rgb(214, 222, 235)\"},\".number\":{\"color\":\"rgb(247, 140, 108)\"},\".builtin,.char,.constant,.function\":{\"color\":\"rgb(130, 170, 255)\"},\".punctuation\":{\"color\":\"rgb(199, 146, 234)\"},\".selector,.doctype\":{\"color\":\"rgb(199, 146, 234)\",\"fontStyle\":\"italic\"},\".class-name\":{\"color\":\"rgb(255, 203, 139)\"},\".tag,.operator,.keyword\":{\"color\":\"rgb(127, 219, 202)\"},\".boolean\":{\"color\":\"rgb(255, 88, 116)\"},\".property\":{\"color\":\"rgb(128, 203, 196)\"},\".namespace\":{\"color\":\"rgb(178, 204, 214)\"}}");
+module.exports = JSON.parse("{\"color\":\"#F8F8F2\",\"backgroundColor\":\"#282A36\",\".prolog,.constant,.builtin\":{\"color\":\"rgb(189, 147, 249)\"},\".inserted,.function\":{\"color\":\"rgb(80, 250, 123)\"},\".deleted\":{\"color\":\"rgb(255, 85, 85)\"},\".changed\":{\"color\":\"rgb(255, 184, 108)\"},\".punctuation,.symbol\":{\"color\":\"rgb(248, 248, 242)\"},\".string,.char,.tag,.selector\":{\"color\":\"rgb(255, 121, 198)\"},\".keyword,.variable\":{\"color\":\"rgb(189, 147, 249)\",\"fontStyle\":\"italic\"},\".comment\":{\"color\":\"rgb(98, 114, 164)\"},\".attr-name\":{\"color\":\"rgb(241, 250, 140)\"}}");
 
 /***/ }),
 
@@ -40545,37 +40545,37 @@ var BaseStyles = function BaseStyles(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  text: "#000",
-  background: "#fff",
-  primary: "#e63b19",
-  secondary: "#c70d3a",
-  sidebar: "#eee",
+  text: "#2E3440",
+  background: "#ECEFF4",
+  primary: "#BF616A",
+  secondary: "#D08770",
+  sidebar: "#D8DEE9",
   borderColor: "rgba(0, 0, 0, 0.15)",
   modes: {
     dark: {
-      text: "#fff",
-      background: "#182952",
-      primary: "#f638dc",
-      secondary: "#ff7976",
-      sidebar: "#101d3c",
+      text: "#ECEFF4",
+      background: "#434C5E",
+      primary: "#B48EAD",
+      secondary: "#A3BE8C",
+      sidebar: "#2E3440",
       borderColor: "rgba(255, 255, 255, 0.15)"
-    },
-    cool: {
-      text: "#fff",
-      background: "#05386b",
-      primary: "#5cdb95",
-      secondary: "#bef992",
-      sidebar: "#052e56",
-      borderColor: "rgba(255, 255, 255, 0.15)"
-    },
-    deep: {
-      text: "#fff",
-      background: "hsl(230,25%,18%)",
-      primary: "hsl(260, 100%, 80%)",
-      secondary: "hsl(290, 100%, 80%)",
-      sidebar: "hsla(230, 20%, 0%, 20%)",
-      borderColor: "rgba(255, 255, 255, 0.15)"
-    }
+    } // cool: {
+    //   text: "#fff",
+    //   background: "#BF616A",
+    //   primary: "#8FBCBB",
+    //   secondary: "#88C0D0",
+    //   sidebar: "#D08770",
+    //   borderColor: "rgba(255, 255, 255, 0.15)"
+    // },
+    // deep: {
+    //   text: "#fff",
+    //   background: "hsl(230,25%,18%)",
+    //   primary: "hsl(260, 100%, 80%)",
+    //   secondary: "hsl(290, 100%, 80%)",
+    //   sidebar: "hsla(230, 20%, 0%, 20%)",
+    //   borderColor: "rgba(255, 255, 255, 0.15)"
+    // }
+
   }
 });
 
@@ -40663,8 +40663,8 @@ const headingBase = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _theme_ui_prism_presets_night_owl_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @theme-ui/prism/presets/night-owl.json */ "./node_modules/@theme-ui/prism/presets/night-owl.json");
-var _theme_ui_prism_presets_night_owl_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! @theme-ui/prism/presets/night-owl.json */ "./node_modules/@theme-ui/prism/presets/night-owl.json", 1);
+/* harmony import */ var _theme_ui_prism_presets_dracula_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @theme-ui/prism/presets/dracula.json */ "./node_modules/@theme-ui/prism/presets/dracula.json");
+var _theme_ui_prism_presets_dracula_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! @theme-ui/prism/presets/dracula.json */ "./node_modules/@theme-ui/prism/presets/dracula.json", 1);
 /* harmony import */ var _colors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./colors */ "./src/gatsby-plugin-theme-ui/colors.js");
 /* harmony import */ var _headings__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headings */ "./src/gatsby-plugin-theme-ui/headings.js");
 
@@ -40719,7 +40719,7 @@ const systemFonts = "-apple-system, BlinkMacSystemFont, San Francisco, Helvetica
         color: "text"
       }
     },
-    pre: _objectSpread(_objectSpread({}, _theme_ui_prism_presets_night_owl_json__WEBPACK_IMPORTED_MODULE_1__), {}, {
+    pre: _objectSpread(_objectSpread({}, _theme_ui_prism_presets_dracula_json__WEBPACK_IMPORTED_MODULE_1__), {}, {
       fontFamily: `"Operator Mono", monospace`,
       fontSize: "0.9rem",
       tabSize: 4,
@@ -40731,7 +40731,7 @@ const systemFonts = "-apple-system, BlinkMacSystemFont, San Francisco, Helvetica
     }),
     inlineCode: {
       color: `primary`,
-      background: `rgba(233, 218, 172, 0.15)`,
+      background: `#3B4252`,
       borderRadius: 3,
       px: `0.4rem`,
       py: `0.2rem`

@@ -69,7 +69,7 @@ export default {
     },
     inlineCode: {
       color: `primary`,
-      background: `rgba(233, 218, 172, 0.15)`,
+      background: `#3B4252`,
       borderRadius: 3,
       px: `0.4rem`,
       py: `0.2rem`
